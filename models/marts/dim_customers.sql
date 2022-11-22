@@ -4,7 +4,7 @@ with customers as ( -- comment  2
 orders as (
     select * from {{ ref('fct_orders')}} -- comment 34
 ),
-customer_orders as (
+customer_orders as ( -- hello world
     select
         customer_id,
         min(order_date) as first_order_date,
