@@ -1,4 +1,4 @@
-with customers as (
+with customers as ( -- comment 1
     select * from {{ ref('stg_customers')}}
 ),
 orders as (
