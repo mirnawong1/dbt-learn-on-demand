@@ -14,7 +14,7 @@ customer_orders as ( -- hello world
     from orders
     group by 1
 ),
-final as (
+final as ( -- hey hey
     select
         customers.customer_id,
         customers.first_name,
