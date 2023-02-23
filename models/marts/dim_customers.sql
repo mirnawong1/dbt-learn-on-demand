@@ -2,9 +2,9 @@ with customers as ( -- comment  2
     select * from {{ ref('stg_customers')}}
 ),
 orders as (
-    select * from {{ ref('fct_orders')}}
+    select * from {{ ref('fct_orders')}} -- comment 34
 ),
-customer_orders as (
+customer_orders as ( -- hello world
     select
         customer_id,
         min(order_date) as first_order_date,
@@ -14,7 +14,11 @@ customer_orders as (
     from orders
     group by 1
 ),
-final as (
+<<<<<<< HEAD
+final as ( -- hey hey
+=======
+final as ( --hey mirna
+>>>>>>> 1ee1bd86a14e2003c999d3dba23775dbfed6e8b7
     select
         customers.customer_id,
         customers.first_name,
