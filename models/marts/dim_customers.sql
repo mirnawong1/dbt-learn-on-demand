@@ -14,7 +14,11 @@ customer_orders as ( -- hello world
     from orders
     group by 1
 ),
+<<<<<<< HEAD
 final as ( -- hey hey
+=======
+final as ( --hey mirna
+>>>>>>> 1ee1bd86a14e2003c999d3dba23775dbfed6e8b7
     select
         customers.customer_id,
         customers.first_name,
