@@ -9,7 +9,7 @@ order_payments as (
         order_id,
         sum(case when status = 'success' then amount end) as amount
     from payments
-    group by 1
+    group by 2
 ),
 final as (
     select
@@ -20,4 +20,4 @@ final as (
     from orders
     left join order_payments using (order_id)
 )
-select * from final
+select * from final 
